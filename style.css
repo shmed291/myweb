@@ -1,0 +1,214 @@
+*{
+    font-family: PT Sans;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    z-index: -1111;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 10px;
+    position: relative;
+    padding: 50px;
+    width: 350px;
+    background:url(imgs/drawing-1.svg)  no-repeat ;
+    background-size: 550px
+;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content a{
+    margin: 5px;
+    width: 300px;
+    padding: 15px;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+.content a ::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 0.3s ;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+.content a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 0.3s ;
+    z-index: -2;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+}
+
+.img img{
+    border-radius: 50%;
+    border: 4px solid #2f2f2f;
+}
+.name p{
+    font-size: 35px;
+    width: 250px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 10px;
+    color: rgb(185, 185, 185);
+}
+.city{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #383b42;
+}
+.job{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(185, 185, 185);
+}
+/* .content a:hover{
+    background-color: #191919;
+box-shadow: 0 0 2px 2px #323843;
+} */
+.content a:nth-child(2) i{
+    transition: 0.3s;
+}
+
+.content a:hover:nth-child(1) i{
+    color: white;
+  
+}
+.content a:nth-child(1):hover i :after{
+    opacity: 1;
+    transition: 0.3s ;
+    background-image: linear-gradient(to right,#c13584,#e1306c,#f56040,#f77737);
+}
+.content a:nth-child(1) i :after{
+    opacity: 0;
+    transition: 0.3s ;
+    background-image: linear-gradient(to right,#c13584,#e1306c,#f56040,#f77737);
+}
+.content a:nth-child(2):hover i :after{
+    opacity: 1;
+    transition: 0.3s ;
+background-color: black;
+}
+.content a:nth-child(2) i :after{
+    opacity: 0;
+    transition: 0.3s ;
+    background-color: black;
+}
+.content a:nth-child(2):hover i{
+    color: white;
+    text-shadow: 2px 2px 1px red, -2px -1px 1px rgb(76, 155, 158);;
+}
+.content a:nth-child(3):hover i{
+    color: rgb(60, 60, 247);
+
+}
+.content a:nth-child(3) i :after{
+    opacity: 0;
+    transition: 0.3s ;
+    background-color: rgb(255, 255, 255);
+}
+.content a:nth-child(3):hover i ::after{
+    opacity: 1;
+    transition: 0.3s ;
+    background-color: rgb(255, 255, 255);
+}
+.content a:nth-child(4)  i :after{
+    opacity: 0;
+    transition: 0.3s;
+    background-color: black;
+}
+.content a:nth-child(4):hover i :after{
+    opacity: 1;
+    transition: 0.3s;
+    background-color: black;
+}
+.content a:nth-child(5):hover i{
+    color: #2c2f33;
+}
+.content a:nth-child(5) i :after{
+    opacity: 0;
+    transition: 0.3s;
+    background-image:linear-gradient(to right,#7289da,#99aab5) ;
+}
+.content a:nth-child(5):hover :after{
+    opacity: 1;
+    transition: 0.3s;
+    background-image:linear-gradient(to right,#7289da,#99aab5) ;
+}
+.id{
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    background-color: url(#clipPath7);
+    right:0;
+    bottom:11px;
+    z-index: -3;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.in{
+    background-image: linear-gradient(to right,#c13584,#e1306c,#f56040,#f77737);
+    background-clip: text;
+    color: transparent;
+}
+.ti{
+    text-shadow: 1px 1px 1px red, -1px -1px 1px rgb(76, 155, 158);;
+}
+.fa{
+    color: rgb(60, 60, 247);
+}
+@media(min-width:760px){
+.content a:hover:nth-child(1) .i1{
+    right: -141px;
+    background-color: #2f2f2f;
+
+}
+.content a:hover:nth-child(1) .i1::after{
+    background-image: none;
+
+}
+.content a:hover:nth-child(2) .i2{
+    right: -141px;
+    background-color: #2f2f2f;}
+.content a:hover:nth-child(2) .i2::after{
+    background-color: #2f2f2f;
+}
+.content a:hover:nth-child(3) .i3{
+        right: -140px;
+        background-color: #2f2f2f;
+ }
+.content a:hover:nth-child(3) .i3::after{
+        background-image: none;
+    
+}
+}
+
